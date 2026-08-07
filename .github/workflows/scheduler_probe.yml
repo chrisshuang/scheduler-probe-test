@@ -3,7 +3,8 @@ name: Scheduler probe
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    # 北京时间每天 22:35，对应 UTC 14:35
+    - cron: "35 14 * * *"
 
 jobs:
   probe:
